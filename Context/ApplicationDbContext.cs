@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace Context
 {
@@ -8,8 +9,10 @@ namespace Context
         {
 
         }
-        
 
+        public DbSet<Account> Accounts { get; set; }
+        public DbSet<Asset> Assets { get; set; }
+        public DbSet<Portfolio> Portfolios { get; set; }
+        public DbSet<Position> Positions { get; set; }
     }
 }
-
