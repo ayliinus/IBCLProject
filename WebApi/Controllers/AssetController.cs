@@ -28,6 +28,12 @@ namespace WebApi.Controllers
                 return BadRequest("Operation failed.");
             }
         }
+        [HttpGet("GetAllAssets")]
+        public IActionResult GetAllAssets()
+        {
+            var assets = _assetBusinessService.GetAllAssets();
+            return Ok(assets);
+        }
 
     }
 }

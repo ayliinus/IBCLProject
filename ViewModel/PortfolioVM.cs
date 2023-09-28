@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ViewModel
 {
-    public class PortfolioCreateVM
+    public class PortfolioVM
     {
         public int AssetId { get; set; }
         public int AccountId { get; set; } 

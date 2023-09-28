@@ -4,17 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entity
+namespace ViewModel
 {
-    public class Account : BaseEntity
+    public class AccountVM
     {
         public string Email { get; set; }
         public string Password { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public double Balance { get; set; }
-        public double NotificationRate { get; set; } 
-
-
+        public double NotificationRate { get; set; }
     }
 }

@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace ViewModel
 {
-    public class AssetCreateVM
+    public class AssetVM
     {
-        public string Symbol { get; set; }
-        public double LastPrice { get; set; }
+        public string symbol { get; set; } 
+        public string price { get; set; }  
+
+     
     }
+
 }

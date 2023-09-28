@@ -27,6 +27,7 @@ builder.Services.AddScoped<IAssetBusinessService, AssetBusinessService>();
 builder.Services.AddScoped<IPortfolioBusinessService, PortfolioBusinessService>();
 builder.Services.AddScoped<IPositionBusinessService, PositionBusinessService>();
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
