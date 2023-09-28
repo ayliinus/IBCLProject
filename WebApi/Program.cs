@@ -1,5 +1,13 @@
+using Business.AccountBusiness;
+using Business.AssetBusiness;
+using Business.PortfolioBusiness;
+using Business.PositionBusiness;
 using Context;
 using Microsoft.EntityFrameworkCore;
+using Repository.AccountRepository;
+using Repository.AssetRepository;
+using Repository.PortfolioRepository;
+using Repository.PositionRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +18,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ApplicationDbContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddScoped<IAccountRepositoryService, AccountRepositoryService>();
+builder.Services.AddScoped<IAssetRepositoryService, AssetRepositoryService>();
+builder.Services.AddScoped<IPortfolioRepositoryService, PortfolioRepositoryService>();
+builder.Services.AddScoped<IPositionRepositoryService, PositionRepositoryService>();
+builder.Services.AddScoped<IAccountBusinessService, AccountBusinessService>();
+builder.Services.AddScoped<IAssetBusinessService, AssetBusinessService>();
+builder.Services.AddScoped<IPortfolioBusinessService, PortfolioBusinessService>();
+builder.Services.AddScoped<IPositionBusinessService, PositionBusinessService>();
 
 var app = builder.Build();
 
